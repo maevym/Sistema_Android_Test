@@ -52,6 +52,7 @@ public class MealsDetail extends AppCompatActivity {
         mealPic = findViewById(R.id.detailPic);
 
         getDetailMealInfo();
+        ingredients.clear();
 
         ingredientsAdapter = new IngredientsAdapter(this);
         ingredientsAdapter.setIngredients(ingredients);
@@ -60,7 +61,6 @@ public class MealsDetail extends AppCompatActivity {
     }
 
     public void getDetailMealInfo(){
-        ingredients.clear();
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         final String url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + mealId;
 
@@ -72,6 +72,7 @@ public class MealsDetail extends AppCompatActivity {
                     try {
                         JSONArray array = response.getJSONArray("meals");
                         for(int i=0; i<array.length(); i++){
+                            ingredients.clear();
                             JSONObject object = array.getJSONObject(i);
 
                             _mealName = object.getString("strMeal");
@@ -83,9 +84,7 @@ public class MealsDetail extends AppCompatActivity {
                             for(int j=1;j<=20;j++){
                                 _mealIngredients = object.getString("strIngredient"+j);
                                 _mealMeasure = object.getString("strMeasure"+j);
-                                if(_mealMeasure.isEmpty() || _mealName.isEmpty()){
-                                    continue;
-                                }else{
+                                if(_mealIngredients.length()>0 && _mealMeasure.length()>0 && !_mealMeasure.equals("null") && !_mealIngredients.equals("null")){
                                     Ingredients temp = new Ingredients(_mealIngredients, _mealMeasure);
                                     ingredients.add(temp);
                                 }
