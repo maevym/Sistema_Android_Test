@@ -1,6 +1,7 @@
 package com.example.sistemaandroidtest.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.sistemaandroidtest.MealsDetail;
 import com.example.sistemaandroidtest.Model.Meals;
 import com.example.sistemaandroidtest.R;
 
@@ -69,7 +71,10 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
         @Override
         public void onClick(View view) {
-            Log.wtf("testRecycler", "click");
+            Log.wtf("testRecycler", mealsId);
+            Intent i = new Intent(view.getContext(), MealsDetail.class);
+            i.putExtra("id", mealsId);
+            view.getContext().startActivity(i);
         }
     }
 }

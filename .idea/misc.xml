@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/maevy/AndroidStudioProjects/SistemaAndroidTest/app/src/main/res/layout/activity_main.xml" value="0.1125" />
+        <entry key="..\:/Users/maevy/AndroidStudioProjects/SistemaAndroidTest/app/src/main/res/layout/activity_meals_detail.xml" value="0.176" />
+        <entry key="..\:/Users/maevy/AndroidStudioProjects/SistemaAndroidTest/app/src/main/res/layout/detail_adapter.xml" value="0.136" />
         <entry key="..\:/Users/maevy/AndroidStudioProjects/SistemaAndroidTest/app/src/main/res/layout/meals_item.xml" value="0.17074275362318841" />
       </map>
     </option>

@@ -28,6 +28,14 @@ public class Meals {
         this.idMeal = idMeal;
     }
 
+    public Meals(String strMeal, String strMealThumb, String strCategory, String strArea, String strInstructions) {
+        this.strMeal = strMeal;
+        this.strMealThumb = strMealThumb;
+        this.strCategory = strCategory;
+        this.strArea = strArea;
+        this.strInstructions = strInstructions;
+    }
+
     public Meals(String strMeal, String strMealThumb, String idMeal, String strDrinkAlternate, String strCategory, String strArea, String strInstructions, String strTags, String strYoutube, Vector<String> strIngredient, Vector<String> strMeasure, String strSource, String strImageSource, String strCreativeCommonsConfirmed, String dateModified) {
         this.strMeal = strMeal;
         this.strMealThumb = strMealThumb;
