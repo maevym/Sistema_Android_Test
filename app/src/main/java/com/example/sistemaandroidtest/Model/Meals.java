@@ -22,13 +22,10 @@ public class Meals {
 
     public Meals(){};
 
-    public Meals(String strMeal, String strMealThumb, String idMeal, String strDrinkAlternate, String strCategory, String strArea) {
+    public Meals(String strMeal, String strMealThumb, String idMeal) {
         this.strMeal = strMeal;
         this.strMealThumb = strMealThumb;
         this.idMeal = idMeal;
-        this.strDrinkAlternate = strDrinkAlternate;
-        this.strCategory = strCategory;
-        this.strArea = strArea;
     }
 
     public Meals(String strMeal, String strMealThumb, String idMeal, String strDrinkAlternate, String strCategory, String strArea, String strInstructions, String strTags, String strYoutube, Vector<String> strIngredient, Vector<String> strMeasure, String strSource, String strImageSource, String strCreativeCommonsConfirmed, String dateModified) {
